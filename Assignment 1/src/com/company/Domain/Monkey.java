@@ -1,0 +1,53 @@
+package com.company.Domain;
+
+public class Monkey implements Animal {
+    private String colour;
+    private String name;
+    private double weight;
+    private String className = "monkey";
+    private int ID;
+
+    public Monkey(int ID, String colour, String name, double weight)
+    {
+        this.ID = ID;
+        this.colour = colour;
+        this.name = name;
+        this.weight = weight;
+    }
+
+    @Override
+    public String getClassName(){
+        return className;
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("Uhahahaha!");
+    }
+
+    @Override
+    public String getColor() {
+        return this.colour;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public double getWeight() {
+        return this.weight;
+    }
+
+    @Override
+    public int getID() {
+        return this.ID;
+    }
+
+    @Override
+    public void printAnimal() {
+        String printingString = "The monkey named " + this.name + " has colour " + this.colour + " and he weights " + this.weight + " kg\n";
+        System.out.print(printingString);
+    }
+}
